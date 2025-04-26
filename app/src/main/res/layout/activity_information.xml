@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+    <!-- Toolbar с заголовком и индикатором статуса -->
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@android:color/transparent">
+
+        <!-- Индикатор статуса -->
+        <View
+                android:id="@+id/statusIndicator"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/status_circle"
+                android:backgroundTint="#FF0000" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- ScrollView для прокрутки содержимого -->
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+        <!-- Контейнер для отображения информации -->
+        <LinearLayout
+                android:id="@+id/infoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp" />
+    </ScrollView>
+
+    <!-- Кнопка "Очистить" -->
+    <Button
+            android:id="@+id/btnClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Очистить"
+            android:backgroundTint="@color/purple_200"
+            android:textColor="@android:color/white" />
+
+</LinearLayout>

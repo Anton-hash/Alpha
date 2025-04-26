@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Alpha</string>
+    <string name="clear_button_description">Очистить наполнение</string>
+    <string name="aggregation">Агрегировать</string>
+    <string name="add">    Добавить</string>
+    <string name="delete">    Удалить</string>
+</resources>

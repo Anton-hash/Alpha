@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp">
+
+    <!-- Основной контент (ваш текущий LinearLayout) -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+        <!-- Toolbar с заголовком и индикатором статуса -->
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:background="@android:color/transparent">
+
+            <!-- Индикатор статуса -->
+            <View
+                    android:id="@+id/statusIndicator"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/status_circle"
+                    android:backgroundTint="#FF0000" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- TextView для сообщений -->
+        <TextView
+                android:id="@+id/messageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        <!-- ProgressBar и TextView для отображения прогресса -->
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp">
+
+            <!-- ProgressBar -->
+            <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:max="10"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/custom_progress_bar"
+                    android:background="@android:color/transparent" />
+
+            <!-- TextView для отображения прогресса внутри ProgressBar -->
+            <TextView
+                    android:id="@+id/progressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0/10"
+                    android:textColor="@android:color/black"
+                    android:textSize="40sp" />
+        </RelativeLayout>
+
+        <!-- TextView для отображения информации о продукте -->
+        <TextView
+                android:id="@+id/productNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="16sp" />
+
+        <TextView
+                android:id="@+id/gtinTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="16sp" />
+
+        <TextView
+                android:id="@+id/lotTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="16sp" />
+
+        <TextView
+                android:id="@+id/countAggL1TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Кнопка "Очистить" в нижнем правом углу -->
+    <ImageButton
+            android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/clear_button_description"
+            android:src="@drawable/ic_delete" />
+
+    <!-- Кнопка "Агрегировать" в нижнем левом углу -->
+    <Button
+            android:id="@+id/aggregateButton"
+            android:layout_width="212dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/purple_200"
+            android:text="@string/aggregation"
+            android:textColor="@android:color/white" />
+
+    <!-- RadioGroup в FrameLayout -->
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/aggregateButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_bg"
+            android:padding="4dp">
+
+        <RadioGroup
+                android:id="@+id/modeRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <RadioButton
+                    android:id="@+id/addModeRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/add"
+                    android:textSize="16sp"/>
+
+            <RadioButton
+                    android:id="@+id/removeModeRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete"
+                    android:textSize="16sp"/>
+        </RadioGroup>
+    </FrameLayout>
+</RelativeLayout>

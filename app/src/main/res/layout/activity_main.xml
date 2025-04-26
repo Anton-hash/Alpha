@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+
+    <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Настройки"
+            android:src="@drawable/settings" />
+
+    <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="Сервер не подключен"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <Button
+                android:id="@+id/btnInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Информация" />
+
+        <Button
+                android:id="@+id/btnAggregationL1Print"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Агрегация в короб" />
+
+        <Button
+                android:id="@+id/btnAggregationL2Print"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Агрегация в паллет" />
+
+        <Button
+                android:id="@+id/btnDesAggregationL1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Разагрегация короба" />
+
+        <Button
+                android:id="@+id/btnDesAggregationL2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Разагрегация паллеты" />
+
+        <Button
+                android:id="@+id/btnReplaceL1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Замена в коробе" />
+
+        <Button
+                android:id="@+id/btnReplaceL2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Замена в паллете" />
+    </LinearLayout>
+
+</RelativeLayout>

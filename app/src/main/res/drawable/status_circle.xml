@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FF0000"/> <!-- Цвет по умолчанию (красный) -->
+    <size android:width="20dp" android:height="20dp"/> <!-- Размер круга -->
+    <corners android:radius="10dp"/> <!-- Необязательно, если используется oval -->
+    <shape android:shape="oval"/> <!-- Указываем, что это круг -->
+</shape>
